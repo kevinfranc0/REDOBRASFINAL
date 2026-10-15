@@ -1,0 +1,153 @@
+@import "tailwindcss";
+
+@theme {
+  --color-forest: #0c3b2e;
+  --color-forest-deep: #07261d;
+  --color-forest-mid: #0f4a3a;
+  --color-leaf: #1a7a4c;
+  --color-leaf-hover: #156b42;
+  --color-mint: #e7f4ec;
+  --color-mist: #f4f7f5;
+  --color-ink: #161a19;
+  --color-mute: #66716c;
+  --color-line: #e4ebe6;
+  --color-gold: #f5b301;
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", "DM Sans", ui-sans-serif, sans-serif;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #f4f7f5;
+  color: #161a19;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.phone-frame {
+  max-width: 430px;
+}
+
+.shadow-card {
+  box-shadow: 0 8px 30px rgba(12, 59, 46, 0.06);
+}
+
+.shadow-float {
+  box-shadow: 0 14px 40px rgba(12, 59, 46, 0.12);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  border: 1px solid var(--color-line);
+  background: white;
+  color: var(--color-ink);
+}
+
+.chip-active {
+  background: var(--color-forest);
+  color: white;
+  border-color: var(--color-forest);
+}
+
+.btn-primary {
+  background: var(--color-leaf);
+  color: white;
+  border: 0;
+  border-radius: 999px;
+  font-weight: 700;
+  padding: 12px 18px;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+.btn-primary:hover {
+  background: var(--color-leaf-hover);
+}
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+.btn-ghost {
+  background: white;
+  color: var(--color-forest);
+  border: 1.5px solid var(--color-line);
+  border-radius: 999px;
+  font-weight: 700;
+  padding: 12px 18px;
+  cursor: pointer;
+}
+
+.input {
+  width: 100%;
+  border: 1.5px solid var(--color-line);
+  background: white;
+  border-radius: 14px;
+  padding: 12px 14px;
+  font-size: 15px;
+  outline: none;
+}
+.input:focus {
+  border-color: var(--color-leaf);
+  box-shadow: 0 0 0 4px rgba(26, 122, 76, 0.12);
+}
+
+.map-grid {
+  background-color: #eef2f0;
+  background-image:
+    linear-gradient(rgba(12, 59, 46, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(12, 59, 46, 0.04) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.rise {
+  animation: rise 0.45s ease both;
+}

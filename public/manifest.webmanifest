@@ -1,0 +1,10 @@
+{
+  "name": "REDOBRA Popayán",
+  "short_name": "REDOBRA",
+  "description": "Conecta, crea, construye. Marketplace local de arquitectura, ingeniería y construcción en Popayán.",
+  "start_url": "/inicio",
+  "display": "standalone",
+  "background_color": "#0c3b2e",
+  "theme_color": "#0c3b2e",
+  "lang": "es-CO"
+}
